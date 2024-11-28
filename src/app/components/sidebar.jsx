@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import OauLogo from "@/app/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
