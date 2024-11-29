@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback, useMemo, useState } from "react";
 import {
   Table,
@@ -22,6 +24,7 @@ import { SearchIcon } from "./SearchIcon";
 import { ChevronDownIcon } from "./ChevronDownIcon";
 import { columns, users, statusOptions } from "./data";
 import { capitalize } from "./utils";
+import { useRouter } from "next/navigation";
 
 const statusColorMap = {
   active: "success",
@@ -32,6 +35,7 @@ const statusColorMap = {
 const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
 
 export default function TableAlum() {
+  const router = useRouter()
   const [filterValue, setFilterValue] = useState("");
   const [selectedKeys, setSelectedKeys] = useState(new Set([]));
   const [visibleColumns, setVisibleColumns] = useState(
@@ -138,9 +142,8 @@ export default function TableAlum() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu>
-                <DropdownItem>View</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
+                <DropdownItem onClick={() => router.push("/dashboard/alumni-profile")}>View</DropdownItem>
+                
               </DropdownMenu>
             </Dropdown>
           </div>

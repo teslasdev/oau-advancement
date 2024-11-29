@@ -92,7 +92,7 @@ const Sidebar = ({params}) => {
   ];
 
   return (
-    <div className="w-[20svw] border flex justify-center items-center bg-white border-[#E0E1E2]">
+    <div className="w-[15dvw] border flex justify-center items-center bg-white border-[#E0E1E2]">
       <div className="w-[90%] py-12 h-full">
         <div className="flex items-center justify-center gap-4">
           <div
